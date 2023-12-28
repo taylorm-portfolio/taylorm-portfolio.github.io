@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Scroll</title>
+    <style>
+        body {
+            margin: 0;
+            height: 200vh; /* Adjust based on content */
+            background: linear-gradient(to bottom, lightblue, white);
+        }
+
+        #homeButton {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #birdAnimation {
+            position: fixed;
+            /* Positioning based on requirement */
+            width: 100px; /* Adjust based on image size */
+            height: 100px; /* Adjust based on image size */
+            background-image: url("bird.jpg"); /* Image source */
+            background-size: 800px 100px; /* Image size */
+            background-position: 0px 0px; /* Initial frame */
+        }
+    </style>
+</head>
+<body onscroll="animateBird()">
+    <button id="homeButton" onclick="window.location.href='index.html';">Home</button>
+
+    <!-- Bird animation container -->
+    <div id="birdAnimation"></div>
+
+    <!-- Content goes here -->
+
+<script type="text/javascript">
+// JavaScript for animating bird based on scroll speed
+let bird = document.getElementById("birdAnimation"); // Get the bird element
+let frame = 0; // Current frame index
+let scrollSpeed = 0; // Current scroll speed
+let lastScroll = 0; // Last scroll position
+let animation; // Animation interval
+
+function animateBird() {
+    // Calculate scroll speed
+    scrollSpeed = Math.abs(window.scrollY - lastScroll);
+    lastScroll = window.scrollY;
+
+    // Clear previous animation interval
+    clearInterval(animation);
+
+    // Set new animation interval based on scroll speed
+    animation = setInterval(function() {
+        // Update frame index
+        frame = (frame + 1) % 8;
+
+        // Update background position to show next frame
+        bird.style.backgroundPosition = (-frame * 100) + "px 0px";
+    }, 1000 / scrollSpeed); // Adjust based on desired animation speed
+}
+</script>
+
+</body>
+</html>

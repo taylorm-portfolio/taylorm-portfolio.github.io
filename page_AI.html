@@ -1,0 +1,106 @@
+<html>
+<head>
+<style>
+/* The style for the parent div */
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2000px;
+  background: linear-gradient(to bottom, lightblue, white);
+}
+
+/* The style for the button */
+.button {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  border: 2px solid black;
+  text-decoration: none;
+  color: black;
+}
+
+/* The style for the canvas */
+#canvas {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+}
+
+/* The keyframes for the running animation */
+@keyframes run {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -400px 0;
+  }
+}
+</style>
+</head>
+<body>
+<div id="container">
+  <div class="button">
+    <a href="index.html">Home</a>
+  </div>
+  <canvas id="canvas"></canvas>
+</div>
+<script>
+// Get the canvas element and its context
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+// Load the sprite sheet image
+var img = new Image();
+img.src = "Bird.png";
+
+// Draw the first frame of the sprite on the canvas
+ctx.drawImage(img, 0, 0, 100, 100, 0, 0, 100, 100);
+
+// Define some variables for the animation
+var frame = 0; // The current frame of the sprite
+var speed = 0; // The speed of the animation
+var lastScroll = 0; // The last scroll position of the window
+
+// Add an event listener for the scroll event
+window.addEventListener("scroll", function() {
+  // Calculate the speed based on the difference between the current and last scroll position
+  speed = Math.abs(window.scrollY - lastScroll);
+  // Update the last scroll position
+  lastScroll = window.scrollY;
+  // Request an animation frame
+  requestAnimationFrame(animate);
+});
+
+// Define the animation function
+function animate() {
+  // Clear the canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // Draw the current frame of the sprite on the canvas
+  ctx.drawImage(img, frame * 100, 0, 100, 100, 0, 0, 100, 100);
+  // Increment the frame by 1
+  frame++;
+  // If the frame reaches the end of the sprite sheet, reset it to 0
+  if (frame == 4) {
+    frame = 0;
+  }
+  // If the speed is greater than 0, request another animation frame
+  if (speed > 0) {
+    requestAnimationFrame(animate);
+    // Decrease the speed by 1
+    speed--;
+  }
+}
+</script>
+</body>
+</html>
