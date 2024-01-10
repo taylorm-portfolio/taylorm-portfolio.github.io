@@ -1,12 +1,12 @@
 body {
     background-color:#ffffff;
-    font-family: optima
-    
+    font-family: optima;
+    margin: 0
 }
 
 .li-logo {
     position: fixed;
-    left: 25px;
+    left: 5vw;
     top: 25vw;
     width: 10vw;
 }
