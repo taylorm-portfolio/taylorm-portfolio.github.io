@@ -1,4 +1,45 @@
-body{
-    background-color:#d2e9c0;
-    font-family:Segoe UI, Tahoma, Geneva, Verdana, sans-serif
+body {
+    background-color:#ffffff;
+    font-family: optima
+    
+}
+
+.li-logo {
+    position: fixed;
+    left: 25px;
+    top: 25vw
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+  
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+  
+.overlay-text {
+    position: absolute;
+    top: 8.7vw; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: #00000000; 
+    color: #fff; 
+    padding: 10px 20px; 
+    font-size: 60px; 
+    letter-spacing: 3px;
+    font-family: optima;
+    text-align: center;
+}
+
+.intro {
+    position: relative;
+    top: 5vw;
+    margin: auto;
+    width: 65%;
+    letter-spacing: 1px;
+    line-height: 25px;
 }
