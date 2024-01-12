@@ -6,9 +6,10 @@ body {
 
 .li-logo {
     position: fixed;
-    left: 5vw;
+    left: 3.25vw;
     top: 25vw;
-    width: 10vw;
+    width: 11vw;
+    border-radius: 5vw;
 }
 
 .image-container {
