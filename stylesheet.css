@@ -40,7 +40,7 @@ body {
     position: relative;
     top: 5vw;
     margin: auto;
-    width: 65%;
+    width: 65vw;
     letter-spacing: 1px;
     line-height: 25px;
 }
@@ -48,7 +48,7 @@ body {
 .body-text {
     position: relative;
     margin: auto;
-    width: 65%;
+    width: 65vw;
     letter-spacing: 1px;
     line-height: 25px;
 }
