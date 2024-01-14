@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #frame {
+            padding: 5pt;
+            width: 90vw;
+            height: 90vh;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide {
+            animation: slide 1.5s forwards;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: none; /* Add this line */
+        }
+        @keyframes slide {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <div id="frame">
+        <!-- Removed the initial iframe here -->
+    </div>
+    <script>
+        var frame = document.getElementById('frame');
+        var files = ['index-0.html', 'index-1.html', 'index-2.html','index-3.html','index-4.html','index.html'];
+        var index = 0;
+
+        // Create an initial iframe with 'index-0.html'
+        var initialIframe = document.createElement('iframe');
+        initialIframe.src = files[index];
+        initialIframe.className = 'slide';
+        frame.appendChild(initialIframe);
+        index++;
+
+        setInterval(function() {
+            var iframe = document.createElement('iframe');
+            iframe.src = files[index % files.length];
+            iframe.className = 'slide';
+            
+            // Add the iframe to the document after setting the src
+            frame.appendChild(iframe);
+
+            if (frame.childNodes.length > 1) {
+                setTimeout(function() {
+                    frame.removeChild(frame.firstChild);
+                }, 500); // Remove the old iframe after the animation completes
+            }
+
+            index++;
+        }, 5000);
+    </script>
+</body>
+</html>
