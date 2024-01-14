@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Design Progression | Taylor Malott</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta name="title" property="og:title" content="Design Progression">
+    <meta propery="og:type" content="website">
+    <meta name="image" property="og:image" content="wide-headshot.jpeg">
+    <meta name="description" property="og:description" content="On this page, I show the design progression of the homepage of my website. I delegated the majority of the coding for this page to AI through carefully crafted chat prompts.">
+    <meta name="author" content="Taylor Malott">
+
     <style>
         #frame {
             padding: 5pt;
@@ -23,8 +32,28 @@
     </style>
 </head>
 <body>
+    <div class="image-container">
+        <!--style="background-image: url(pano-header.jpg); background-size: contain; background-repeat: no-repeat; width: 100%; height: 0; padding-top: 17.41%;"-->
+        <img title="Taylor Malott" src="pano-header.jpg" alt="Panoramic view of mountains and sky">
+        <div class="overlay-text" style="font-size: 5vw;">Design Progression</div>
+    </div>
+    <div class="body-text">
+        <p>
+            On this page, I show the design progression of the homepage of my website. I delegated the majority of the coding for this page to AI through carefully crafted chat prompts.
+            <br>
+            <br>
+            You can pause the animation at any time you like, and use the slider to choose a specific page to view.
+        </p>
+    </div>
+   
+    <div style="text-align: center;">
     <button id="pause">Pause</button>
     <input type="range" min="0" max="4" value="0" id="slider"> <!--change this max value based on the number of html files in var files in the script below-->
+    </div>
+    <br>
+    <div style="position: relative; height: 2px; width: 100vw; background-color: black;">
+    </div>
+    <br>
     <div id="frame">
         <!-- Removed the initial iframe here -->
     </div>

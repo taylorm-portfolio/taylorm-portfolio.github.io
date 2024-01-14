@@ -9,7 +9,6 @@ body {
     left: 3.25vw;
     top: 25vw;
     width: 11vw;
-    border-radius: 5vw;
 }
 
 .image-container {
@@ -40,6 +39,14 @@ body {
 .intro {
     position: relative;
     top: 5vw;
+    margin: auto;
+    width: 65%;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+.body-text {
+    position: relative;
     margin: auto;
     width: 65%;
     letter-spacing: 1px;
