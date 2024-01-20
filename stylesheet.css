@@ -95,12 +95,25 @@ body {
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
     display: none;
+    font-size: 5vw;
 }
 @media screen and (max-width: 600px) {
-.topnav a {display: none;}
+.topnav a {
+    display: none;
+}
 .topnav a.icon {
   float: right;
   display: block;
+  line-height: 0;
+  color: #707070;
+}
+.topnav {
+    height: 5vw;
+    background-color: #ffffff;
+    position: fixed;
+    right: 3.25vw;
+    top: 25vw;
+    width: 11vw;
 }
 }
 
