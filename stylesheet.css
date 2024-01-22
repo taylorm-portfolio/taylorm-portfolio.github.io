@@ -87,8 +87,8 @@ body {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #707070;
+    color: #ffffff;
 }
 
 
@@ -100,6 +100,8 @@ body {
 @media screen and (max-width: 600px) {
 .topnav a {
     display: none;
+    color: #707070;
+    border-right: 0;
 }
 .topnav a.icon {
   float: right;
@@ -108,12 +110,13 @@ body {
   color: #707070;
 }
 .topnav {
-    height: 5vw;
+    /*height: 5vw;*/
     background-color: #ffffff;
+    color: #707070;
     position: fixed;
-    right: 3.25vw;
-    top: 25vw;
-    width: 11vw;
+    /*right: 3.25vw;
+    top: 25vw;*/
+    /*width: 11vw;*/
 }
 }
 
