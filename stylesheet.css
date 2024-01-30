@@ -90,7 +90,7 @@ body {
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
+.topnav a:hover, .topnav a.icon:hover {
     background-color: #707070;
     color: #ffffff;
 }
@@ -107,32 +107,35 @@ body {
     display: none;
     color: #707070;
     border-right: 0;
+    
 }
 .topnav a.icon {
   position: relative;
     float: right;
   display: block;
+  left: 0vw;
   line-height: 0;
   color: #707070;
+
   
 }
 
-/*.li-logo {
+.li-logo {
     position: fixed;
     float: left;
     display: block;
     left: 3.25vw;
     top: 20vw;
     width: 11vw;
-}*/
+}
 
 .topnav {
     /*height: 5vw;*/
     background-color: #ffffff;
     color: #707070;
-    position: fixed;
+    position: relative;
     right: 3.25vw;
-    top: 22vw;
+    /*top: 22vw;
     /*width: 11vw;*/
 }
 }
