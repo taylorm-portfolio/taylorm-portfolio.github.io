@@ -7,8 +7,10 @@ body {
 
 .li-logo {
     position: fixed;
+    float: left;
+    display: block;
     left: 3.25vw;
-    top: 25vw;
+    top: 24vw;
     width: 11vw;
 }
 
@@ -46,6 +48,8 @@ body {
 }
 
 .intro {
+    display: block;
+    float: center;
     position: relative;
     top: 5vw;
     margin: auto;
@@ -96,6 +100,7 @@ body {
 .topnav .icon {
     display: none;
     font-size: 5vw;
+    float: right;
 }
 @media screen and (max-width: 600px) {
 .topnav a {
@@ -104,18 +109,30 @@ body {
     border-right: 0;
 }
 .topnav a.icon {
-  float: right;
+  position: relative;
+    float: right;
   display: block;
   line-height: 0;
   color: #707070;
+  
 }
+
+/*.li-logo {
+    position: fixed;
+    float: left;
+    display: block;
+    left: 3.25vw;
+    top: 20vw;
+    width: 11vw;
+}*/
+
 .topnav {
     /*height: 5vw;*/
     background-color: #ffffff;
     color: #707070;
     position: fixed;
-    /*right: 3.25vw;
-    top: 25vw;*/
+    right: 3.25vw;
+    top: 22vw;
     /*width: 11vw;*/
 }
 }
@@ -127,6 +144,7 @@ body {
   .topnav.responsive {position: relative;}
   .topnav.responsive a.icon {
     position: absolute;
+    float: right;
     right: 0;
     top: 0;
   }
