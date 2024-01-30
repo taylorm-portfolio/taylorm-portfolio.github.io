@@ -6,11 +6,12 @@ body {
 
 
 .li-logo {
-    position: fixed;
+    position: sticky;
     float: left;
     display: block;
+    padding-top: 3.25vw;
     left: 3.25vw;
-    top: 24vw;
+    top: 0vw;
     width: 11vw;
 }
 
@@ -72,8 +73,7 @@ body {
 .topnav {
     background-color: #707070;
     overflow: hidden;
-    margin: 0;
-    padding: 0;
+    
 }
 
 /* Style the links inside the navigation bar */
@@ -86,7 +86,7 @@ body {
     text-decoration: none;
     font-size: 17px;
     border-right: 1px solid #bbb;
-    margin: 0;
+    
 }
 
 /* Change the color of links on hover */
@@ -100,7 +100,7 @@ body {
 .topnav .icon {
     display: none;
     font-size: 5vw;
-    float: right;
+    /*float: right;*/
 }
 @media screen and (max-width: 600px) {
 .topnav a {
@@ -108,12 +108,14 @@ body {
     color: #707070;
     border-right: 0;
     
+    
 }
 .topnav a.icon {
   position: relative;
-    float: right;
+    /*float: right;*/
+    left: 85vw;
   display: block;
-  left: 0vw;
+  /*left: 0vw;*/
   line-height: 0;
   color: #707070;
 
@@ -121,12 +123,15 @@ body {
 }
 
 .li-logo {
-    position: fixed;
+    position: sticky;
     float: left;
     display: block;
+    padding-top: 3.25vw;
     left: 3.25vw;
-    top: 20vw;
+    top: 0vw;
     width: 11vw;
+
+    
 }
 
 .topnav {
@@ -144,16 +149,17 @@ body {
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {position: relative; overflow: hidden;}
   .topnav.responsive a.icon {
     position: absolute;
-    float: right;
-    right: 0;
+    /*float: right;*/
+    left: 85vw;
     top: 0;
   }
   .topnav.responsive a {
-    float: none;
+    float: left;
     display: block;
-    text-align: left;
+    text-align: center;
+    padding-left: 7vw;
   }
 }
