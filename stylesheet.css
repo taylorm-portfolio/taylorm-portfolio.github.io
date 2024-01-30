@@ -7,10 +7,10 @@ body {
 
 .li-logo {
     position: sticky;
-    float: left;
+    float: right;
     display: block;
     padding-top: 3.25vw;
-    left: 3.25vw;
+    right: 3.25vw;
     top: 0vw;
     width: 11vw;
 }
@@ -113,7 +113,7 @@ body {
 .topnav a.icon {
   position: relative;
     /*float: right;*/
-    left: 85vw;
+    left: 88.2vw;
   display: block;
   /*left: 0vw;*/
   line-height: 0;
@@ -124,10 +124,10 @@ body {
 
 .li-logo {
     position: sticky;
-    float: left;
+    float: right;
     display: block;
     padding-top: 3.25vw;
-    left: 3.25vw;
+    right: 3.25vw;
     top: 0vw;
     width: 11vw;
 
