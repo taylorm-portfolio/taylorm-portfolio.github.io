@@ -39,7 +39,9 @@
     </div>
     <div class="topnav" id="myTopnav">
         <a href="index.html">Home</a>
-        <a href="original-site/assassin-vs-guy.html">Creative Projects</a>
+        <!--<a href="original-site/assassin-vs-guy.html">Creative Projects</a>
+        -->    
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a> 
     </div>
     <div class="body-text">
         <p>
@@ -118,5 +120,20 @@
             createIframe();
         });
     </script>
+
 </body>
+
+<script type="text/javascript"> /* this code is to help menu responsiveness on mobile device screen
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+      }
+    
+    </script>
+
 </html>
