@@ -15,6 +15,16 @@ body {
     width: 11vw;
 }
 
+.face {
+    position: sticky;
+    float: left;
+    display: block;
+    padding-top: 3.25vw;
+    left: 3.25vw;
+    top: 0vw;
+    width: 11vw;
+}
+
 .image-container {
     position: relative;
     display: block; /*This was set to inline block, but it caused a white line to appear between the topnav and image container elements.*/
