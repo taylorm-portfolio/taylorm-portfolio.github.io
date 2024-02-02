@@ -15,7 +15,7 @@ body {
     width: 11vw;
 }
 
-.face {
+.face { /*same as li-logo but at left side of screen instead*/
     position: sticky;
     float: left;
     display: block;
