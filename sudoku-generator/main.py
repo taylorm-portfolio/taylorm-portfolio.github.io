@@ -7,5 +7,6 @@ from sudoku import sudokuGen
 #    for k in range(1,20):
 #        
        # sudokoGen(i)
-
+print("run code")
 sudokuGen(35)
+print("code run")
