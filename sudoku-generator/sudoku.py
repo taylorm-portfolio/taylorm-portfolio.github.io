@@ -132,3 +132,4 @@ def sudokuGen(removeN):
     addRowDB([keyVal,runDate,triesSln,round(runTimeSln,3),loopcount,round(runTimePuzzle,3),round(runTimeOverall,3),removeN])
 
     # sys.stdout = original_stdout
+    return df

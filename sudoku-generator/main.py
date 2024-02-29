@@ -8,5 +8,6 @@ from sudoku import sudokuGen
 #        
        # sudokoGen(i)
 print("run code")
-sudokuGen(35)
+df = sudokuGen(35)
 print("code run")
+print(df)
