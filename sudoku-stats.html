@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sudoku Generator Stats | Taylor Malott</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta name="title" property="og:title" content="Sudoku Generator Stats | Taylor Malott">
+    <meta propery="og:type" content="website">
+    <meta name="image" property="og:image" content="wide-headshot.jpeg">
+    <meta name="description" property="og:description" content="Dashboard visualizing run statistics for my sudoku generator program.">
+    <meta name="author" content="Taylor Malott">
+
+    <style>
+        #frame {
+            padding: 5pt;
+            width: 90vw;
+            height: 90vh;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide {
+            animation: slide 0.5s forwards;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: none; /* Add this line */
+        }
+        @keyframes slide {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <!--style="background-image: url(pano-header.jpg); background-size: contain; background-repeat: no-repeat; width: 100%; height: 0; padding-top: 17.41%;"-->
+        <img title="Taylor Malott" src="pano-header.jpg" alt="Panoramic view of mountains and sky">
+        <div class="overlay-text" style="font-size: 5vw;">Sudoku Generator Stats</div>
+    </div>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <!--<a href="original-site/assassin-vs-guy.html">Creative Projects</a>
+        -->    
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a> 
+    </div>
+    <div class="body-text">
+        <p>
+            This is a web app that I created using the Dash library in python. The app is a dashboard that shows the run statistics of my sudoku generator program that I built using Python and SQL.
+            <br>
+            <br>
+            This is an interactive dashboard - feel free to play around with it.
+        </p>
+    </div>
+
+    <iframe src="http://localhost:8050" width=100% height=2000px></iframe>
+   
+    <script type="text/javascript"> /* this code is to help menu responsiveness on mobile device screen
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+        
+    </script>
+
+</body>
+
+
+</html>
